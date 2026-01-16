@@ -8,7 +8,7 @@ import subprocess
 if os.path.exists("dist"):
     shutil.rmtree("dist")
 
-VERSION = "1.2.6"
+VERSION = "1.2.7"
 
 
 with open("README.md") as f:
@@ -21,7 +21,7 @@ def write_version_py(filename="SigProfilerExtractor/version.py"):
 # THIS FILE IS GENERATED FROM SIGPROFILEREXTRACTOR SETUP.PY
 short_version = '%(version)s'
 version = '%(version)s'
-Update = 'v1.2.6: Update default COSMIC version to 3.5'
+Update = 'v1.2.7: Removed nimfa dependency and implemented NNDSVD directly for NumPy 2.0 compatibility'
     
     """
     fh = open(filename, "w")
@@ -39,7 +39,6 @@ requirements = [
     "torch>=1.8.1",
     "numpy>=2.0.0",
     "pandas>=2.0.0",
-    "nimfa>=1.1.0",
     "sigProfilerPlotting>=1.4.1",
     "SigProfilerMatrixGenerator>=1.3.5",
     "SigProfilerAssignment>=1.1.0",

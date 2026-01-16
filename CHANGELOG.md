@@ -7,6 +7,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [1.2.7] - 2026-01-20
+
+### Fixed
+- Fixed NumPy 2.0 compatibility issue by removing the `nimfa` dependency, which was incompatible with NumPy 2.0 due to use of deprecated `np.mat()` function.
+
+### Changed
+- Removed `nimfa>=1.1.0` dependency from requirements.
+- Implemented NNDSVD (Non-Negative Double Singular Value Decomposition) initialization directly in the codebase to replace nimfa.
+- All NNDSVD initializations now use `numpy.random.Generator` with PCG64DXSM for improved reproducibility.
+
+### Added
+- Added `SigProfilerExtractor/nndsvd.py` with standalone NNDSVD implementation supporting all variants (nndsvd, nndsvda, nndsvdar, nndsvd_min).
+
 ## [1.2.6] - 2026-01-06
 
 ### Changed
