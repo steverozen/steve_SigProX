@@ -1043,7 +1043,9 @@ def sigProfilerExtractor(
 
         # write the name of Samples and Matrix participating in each Layer.
         layer_genome = pd.DataFrame(genomes)
-        layer_genome = layer_genome.set_index(index)
+        # Convert index to list for pandas 3.12 compatibility and assign directly to index
+        index_list = list(index)
+        layer_genome.index = index_list
         layer_genome.columns = colnames
         layer_genome = layer_genome.rename_axis("MutationType", axis="columns")
 

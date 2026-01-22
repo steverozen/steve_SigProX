@@ -7,15 +7,21 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-## [1.2.7] - 2026-01-20
+## [1.2.7] - 2026-01-22
 
 ### Fixed
 - Fixed NumPy 2.0 compatibility issue by removing the `nimfa` dependency, which was incompatible with NumPy 2.0 due to use of deprecated `np.mat()` function.
+- Fixed pandas 3.12 compatibility issues:
+  - Updated `to_csv()` calls to use `sep` as keyword argument instead of positional argument
+  - Fixed `set_index()` calls to work with pandas 3.12's stricter type checking by converting StringArray to list
+  - Fixed `iloc` assignment for string conversion operations
+  - Fixed Series indexing to use `.iloc[0]` for positional access instead of `[0]` for label-based access
+- Fixed compatibility issues in SigProfilerAssignment and SigProfilerPlotting packages for pandas 3.12
 
 ### Changed
-- Removed `nimfa>=1.1.0` dependency from requirements.
-- Implemented NNDSVD (Non-Negative Double Singular Value Decomposition) initialization directly in the codebase to replace nimfa.
-- All NNDSVD initializations now use `numpy.random.Generator` with PCG64DXSM for improved reproducibility.
+- Removed `nimfa` dependency and implemented NNDSVD initialization directly in the codebase.
+- Updated `sigProfilerPlotting` dependency to >=1.4.3 for pandas 3.12 compatibility.
+- Removed TMB debug file output.
 
 ### Added
 - Added `SigProfilerExtractor/nndsvd.py` with standalone NNDSVD implementation supporting all variants (nndsvd, nndsvda, nndsvdar, nndsvd_min).
