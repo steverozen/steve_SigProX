@@ -431,6 +431,9 @@ def pnmf(
     rand_rng = Generator(PCG64DXSM(rep_generator))
     poisson_rng = Generator(PCG64DXSM(poisson_generator))
 
+    precision = execution_parameters["precision"] if execution_parameters else "single"
+    np_dtype = np.float32 if precision == "single" else np.float64
+
     if gpu:
         batch_size = batch_generator_pair[0]
         nmf_fn = nnmf_gpu
@@ -443,6 +446,7 @@ def pnmf(
             else:
                 bootstrapGenomes = genomes
 
+            bootstrapGenomes = bootstrapGenomes.astype(np_dtype)
             bootstrapGenomes[bootstrapGenomes < 0.0001] = 0.0001
             totalMutations = np.sum(bootstrapGenomes, axis=0)
             bootstrapGenomes = normalize_samples(
@@ -482,8 +486,8 @@ def pnmf(
         else:
             bootstrapGenomes = genomes
 
+        bootstrapGenomes = bootstrapGenomes.astype(np_dtype)
         bootstrapGenomes[bootstrapGenomes < 0.0001] = 0.0001
-        bootstrapGenomes = bootstrapGenomes.astype(float)
 
         # normalize the samples to handle the hypermutators
 
