@@ -1391,7 +1391,7 @@ def export_information(
         + str(i)
         + "_Signatures"
         + ".txt",
-        "\t",
+        sep="\t",
         index_label=[processes.columns.name],
     )
 
@@ -1409,7 +1409,7 @@ def export_information(
         + "_S"
         + str(i)
         + "_NMF_Activities.txt",
-        "\t",
+        sep="\t",
         index_label=[exposures.columns.name],
     )
 
