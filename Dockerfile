@@ -18,7 +18,7 @@ RUN pip3 install --no-cache-dir \
 
 # Install SigProfilerExtractor from specific commit
 RUN pip3 install --no-cache-dir \
-    'git+https://github.com/AlexandrovLab/SigProfilerExtractor.git@'${COMMIT_SHA}
+    'git+https://github.com/SigProfilerSuite/SigProfilerExtractor.git@'${COMMIT_SHA}
 
 # Create a non-root user
 RUN useradd -m -s /bin/bash spm_user

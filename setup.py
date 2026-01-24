@@ -41,7 +41,7 @@ requirements = [
     "pandas>=2.0.0",
     "sigProfilerPlotting>=1.4.3",  # Requires v1.4.3+ for pandas 3.12 compatibility fixes in tmbplot.py
     "SigProfilerMatrixGenerator>=1.3.5",
-    "SigProfilerAssignment>=1.1.0",
+    "SigProfilerAssignment>=1.1.2",
     "statsmodels>=0.9.0",
     "scikit-learn>=0.24.2",
     "psutil>=5.6.1",
@@ -96,7 +96,7 @@ setup(
     description="Extracts mutational signatures from mutational catalogues",
     long_description=long_description,
     long_description_content_type="text/markdown",  # This is important!
-    url="https://github.com/AlexandrovLab/SigProfilerExtractor.git",
+    url="https://github.com/SigProfilerSuite/SigProfilerExtractor.git",
     author="S Mishu Ashiqul Islam",
     author_email="m0islam@ucsd.edu",
     license="UCSD",

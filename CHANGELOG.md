@@ -22,6 +22,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Removed `nimfa` dependency and implemented NNDSVD initialization directly in the codebase.
 - Updated `sigProfilerPlotting` dependency to >=1.4.3 for pandas 3.12 compatibility.
 - Removed TMB debug file output.
+- Migrated CI/CD pipeline from Travis CI to GitHub Actions for improved reliability and modern workflow management.
 
 ### Added
 - Added `SigProfilerExtractor/nndsvd.py` with standalone NNDSVD implementation supporting all variants (nndsvd, nndsvda, nndsvdar, nndsvd_min).
