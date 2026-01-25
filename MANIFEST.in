@@ -5,4 +5,3 @@ include SigProfilerExtractor/data/CSVInput/*
 include SigProfilerExtractor/data/MatObjInput/*
 include SigProfilerExtractor/data/ReferenceFiles/*
 include SigProfilerExtractor/controllers/*
-

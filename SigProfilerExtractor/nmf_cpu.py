@@ -11,7 +11,7 @@ Implementation of non-negative matrix factorization for GPU
 
 from datetime import datetime
 
-from nimfa.methods.seeding import nndsvd
+from .nndsvd import Nndsvd
 import numpy as np
 import torch
 import torch.nn
@@ -111,39 +111,39 @@ class NMF:
         elif init_method == "nndsvd":
             W = np.zeros([self._V.shape[0], self._V.shape[1], self._rank])
             H = np.zeros([self._V.shape[0], self._rank, self._V.shape[2]])
-            nv = nndsvd.Nndsvd()
+            nv = Nndsvd()
             for i in range(self._V.shape[0]):
-                vin = np.asmatrix(self._V.cpu().numpy()[i])
+                vin = self._V.cpu().numpy()[i]
                 W[i, :, :], H[i, :, :] = nv.initialize(
-                    vin, self._rank, options={"flag": 0}
+                    vin, self._rank, options={"flag": 0, "generator": self._generator}
                 )
 
         elif init_method == "nndsvda":
             W = np.zeros([self._V.shape[0], self._V.shape[1], self._rank])
             H = np.zeros([self._V.shape[0], self._rank, self._V.shape[2]])
-            nv = nndsvd.Nndsvd()
+            nv = Nndsvd()
             for i in range(self._V.shape[0]):
-                vin = np.asmatrix(self._V.cpu().numpy()[i])
+                vin = self._V.cpu().numpy()[i]
                 W[i, :, :], H[i, :, :] = nv.initialize(
-                    vin, self._rank, options={"flag": 1}
+                    vin, self._rank, options={"flag": 1, "generator": self._generator}
                 )
 
         elif init_method == "nndsvdar":
             W = np.zeros([self._V.shape[0], self._V.shape[1], self._rank])
             H = np.zeros([self._V.shape[0], self._rank, self._V.shape[2]])
-            nv = nndsvd.Nndsvd()
+            nv = Nndsvd()
             for i in range(self._V.shape[0]):
-                vin = np.asmatrix(self._V.cpu().numpy()[i])
+                vin = self._V.cpu().numpy()[i]
                 W[i, :, :], H[i, :, :] = nv.initialize(
-                    vin, self._rank, options={"flag": 2}
+                    vin, self._rank, options={"flag": 2, "generator": self._generator}
                 )
         elif init_method == "nndsvd_min":
             W = np.zeros([self._V.shape[0], self._V.shape[1], self._rank])
             H = np.zeros([self._V.shape[0], self._rank, self._V.shape[2]])
-            nv = nndsvd.Nndsvd()
+            nv = Nndsvd()
             for i in range(self._V.shape[0]):
-                vin = np.asmatrix(self._V.cpu().numpy()[i])
-                w, h = nv.initialize(vin, self._rank, options={"flag": 2})
+                vin = self._V.cpu().numpy()[i]
+                w, h = nv.initialize(vin, self._rank, options={"flag": 2, "generator": self._generator})
                 min_X = np.min(vin[vin > 0])
                 h[h <= min_X] = min_X
                 w[w <= min_X] = min_X
