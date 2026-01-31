@@ -13,7 +13,7 @@ L. Humphreys, N. Syulyukina, S.W. Brady, B.S. Alexandrov, N. Pillay, J. Zhang, D
 This software and its documentation are copyright 2018 as a part of the SigProfiler project. The SigProfilerExtractor framework is free software and is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 <br>
 ### Contact ###
-All SigProfilerGenerator related queries or bug reports should be directed to S M Ashiqul Islam (Mishu) at m0islam@ucsd.edu.
+All SigProfilerGenerator related queries or bug reports should be directed to S M Ashiqul Islam (Mishu) at sislam6@albany.edu.
 
 
   [1]: https://www.python.org/
