@@ -1,4 +1,4 @@
-[![Docs](https://img.shields.io/badge/docs-latest-blue.svg)](docs/index.md)
+[![Docs](https://img.shields.io/badge/docs-latest-blue.svg)](https://sigprofilersuite.github.io/SigProfilerExtractor/)
 [![License](https://img.shields.io/badge/License-BSD\%202--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)
 [![CI](https://github.com/SigProfilerSuite/SigProfilerExtractor/actions/workflows/ci.yml/badge.svg)](https://github.com/SigProfilerSuite/SigProfilerExtractor/actions/workflows/ci.yml)
 
@@ -14,6 +14,7 @@ This repository's documentation has been migrated into the repo and is rendered 
 
 - Source pages: `docs/` (start at `docs/index.md`)
 - MkDocs config: `mkdocs.yml`
+- Hosted docs (GitHub Pages): `https://sigprofilersuite.github.io/SigProfilerExtractor/` (requires repo Pages “Source: GitHub Actions”)
 
 ### Preview docs locally
 

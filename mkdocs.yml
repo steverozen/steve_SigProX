@@ -3,6 +3,7 @@ repo_name: SigProfilerSuite/SigProfilerExtractor
 repo_url: https://github.com/SigProfilerSuite/SigProfilerExtractor
 
 docs_dir: docs
+site_url: https://sigprofilersuite.github.io/SigProfilerExtractor/
 
 not_in_nav: |
   home.md
