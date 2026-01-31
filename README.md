@@ -1,4 +1,4 @@
-[![Docs](https://img.shields.io/badge/docs-latest-blue.svg)](docs/home.md)
+[![Docs](https://img.shields.io/badge/docs-latest-blue.svg)](docs/index.md)
 [![License](https://img.shields.io/badge/License-BSD\%202--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)
 [![CI](https://github.com/SigProfilerSuite/SigProfilerExtractor/actions/workflows/ci.yml/badge.svg)](https://github.com/SigProfilerSuite/SigProfilerExtractor/actions/workflows/ci.yml)
 
@@ -6,7 +6,7 @@
 SigProfilerExtractor allows de novo extraction of mutational signatures from data generated in a matrix format. 
 The tool identifies the number of operative mutational signatures, their activities in each sample, and the probability 
 for each signature to cause a specific mutation type in a cancer sample. The tool makes use of SigProfilerMatrixGenerator 
-and SigProfilerPlotting. Detailed documentation can be found in-repo under `docs/` (start at `docs/home.md`).
+and SigProfilerPlotting. Detailed documentation can be found in-repo under `docs/` (start at `docs/index.md`).
 
 # Table of contents
 - [Installation](#installation)

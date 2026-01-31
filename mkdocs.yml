@@ -4,6 +4,9 @@ repo_url: https://github.com/SigProfilerSuite/SigProfilerExtractor
 
 docs_dir: docs
 
+not_in_nav: |
+  home.md
+
 theme:
   name: material
   features:
@@ -26,7 +29,7 @@ theme:
         name: Switch to dark mode
 
 nav:
-  - Home: home.md
+  - Home: index.md
   - Getting Started:
       - '1. Installation': '1. Installation.md'
       - '2. Quick Start Example': '2. Quick Start Example.md'
