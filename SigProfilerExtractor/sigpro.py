@@ -377,7 +377,7 @@ def sigProfilerExtractor(
 
     Returns
     -------
-    To learn about the output, please visit https://osf.io/t6j7u/wiki/home/
+    To learn about the output, please see the documentation under the repository's `docs/` folder.
 
 
     Examples
