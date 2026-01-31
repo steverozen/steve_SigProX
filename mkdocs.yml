@@ -7,6 +7,8 @@ docs_dir: docs
 not_in_nav: |
   home.md
 
+use_directory_urls: false
+
 theme:
   name: material
   features:
