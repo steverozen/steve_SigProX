@@ -1,0 +1,17 @@
+site_name: SigProfilerExtractor
+repo_name: SigProfilerSuite/SigProfilerExtractor
+repo_url: https://github.com/SigProfilerSuite/SigProfilerExtractor
+
+docs_dir: docs
+
+theme:
+  name: readthedocs
+
+nav:
+  - Home: index.md
+  - Installation: installation.md
+  - CLI Usage: cli-usage.md
+  - Python API: python-api.md
+  - Output: output.md
+  - Citation: citation.md
+

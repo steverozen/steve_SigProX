@@ -1,4 +1,4 @@
-[![Docs](https://img.shields.io/badge/docs-latest-blue.svg)](https://osf.io/t6j7u/wiki/home/) 
+[![Docs](https://img.shields.io/badge/docs-latest-blue.svg)](docs/index.md)
 [![License](https://img.shields.io/badge/License-BSD\%202--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)
 [![CI](https://github.com/SigProfilerSuite/SigProfilerExtractor/actions/workflows/ci.yml/badge.svg)](https://github.com/SigProfilerSuite/SigProfilerExtractor/actions/workflows/ci.yml)
 
@@ -6,7 +6,7 @@
 SigProfilerExtractor allows de novo extraction of mutational signatures from data generated in a matrix format. 
 The tool identifies the number of operative mutational signatures, their activities in each sample, and the probability 
 for each signature to cause a specific mutation type in a cancer sample. The tool makes use of SigProfilerMatrixGenerator 
-and SigProfilerPlotting. Detailed documentation can be found at: https://osf.io/t6j7u/wiki/home/
+and SigProfilerPlotting. Detailed documentation can be found in-repo under `docs/` (start at `docs/index.md`).
 
 # Table of contents
 - [Installation](#installation)
@@ -93,7 +93,7 @@ sigProfilerExtractor(input_type, out_put, input_data, reference_genome="GRCh37",
 | Category | Parameter | Variable Type | Parameter Description |
 | --------- | --------------------- | -------- |-------- |
 | **Input Data** |  |  | |
-|  | **input_type** | String | The type of input:<br><ul><li>`"vcf"`: used for vcf format inputs.</li><li>`"matrix"`: used for table format inputs using a tab separated file.</li><li>`"bedpe"`: used for bedpe files with each SV annotated with its type, size bin, and clustered/non-clustered status. Please check the required format at https://github.com/AlexandrovLab/SigProfilerMatrixGenerator#structural-variant-matrix-generation.</li><li>`"seg:TYPE"`: used for a multi-sample segmentation file for copy number analysis. Please check the required format at https://github.com/AlexandrovLab/SigProfilerMatrixGenerator#copy-number-matrix-generation. The accepted callers for TYPE are the following {"ASCAT", "ASCAT_NGS", "SEQUENZA", "ABSOLUTE", "BATTENBERG", "FACETS", "PURPLE", "TCGA"}. For example, when using segmentation file from BATTENBERG then set input_type to "seg:BATTENBERG".</li></ul> |
+|  | **input_type** | String | The type of input:<br><ul><li>`"vcf"`: used for vcf format inputs.</li><li>`"matrix"`: used for table format inputs using a tab separated file.</li><li>`"bedpe"`: used for bedpe files with each SV annotated with its type, size bin, and clustered/non-clustered status. Please check the required format at https://github.com/SigProfilerSuite/SigProfilerMatrixGenerator#structural-variant-matrix-generation.</li><li>`"seg:TYPE"`: used for a multi-sample segmentation file for copy number analysis. Please check the required format at https://github.com/SigProfilerSuite/SigProfilerMatrixGenerator#copy-number-matrix-generation. The accepted callers for TYPE are the following {"ASCAT", "ASCAT_NGS", "SEQUENZA", "ABSOLUTE", "BATTENBERG", "FACETS", "PURPLE", "TCGA"}. For example, when using segmentation file from BATTENBERG then set input_type to "seg:BATTENBERG".</li></ul> |
 |  | **output** | String | The name of the output folder. The output folder will be generated in the current working directory.  |
 |  | **input_data** | String | <br>Path to input folder for input_type:<ul><li>`vcf`</li><li>`bedpe`</li></ul>Path to file for input_type:<ul><li>`matrix`</li><li>`seg:TYPE`</li></ul> |
 |  | **reference_genome** | String | The name of the reference genome (default: `"GRCh37"`). This parameter is applicable only if the `input_type` is `"vcf"`. |
@@ -161,7 +161,7 @@ if __name__=="__main__":
 ```
 
 #### sigProfilerExtractor Output
-To learn about the output, please visit https://osf.io/t6j7u/wiki/home/
+To learn about the output, see `docs/output.md`.
   
 
 ### <a name="estimate_solution"></a> Estimation of the Optimum Solution
@@ -218,7 +218,7 @@ The files below will be generated in the output folder:
 
 ### <a name="decompose"></a> Decompose
 
-For decomposition of de novo signatures please use [SigProfilerAssignment](https://github.com/AlexandrovLab/SigProfilerAssignment)
+For decomposition of de novo signatures please use [SigProfilerAssignment](https://github.com/SigProfilerSuite/SigProfilerAssignment)
         
 ### <a name="plotActivity"></a> Activity Stacked Bar Plot
 Generates a stacked bar plot showing activities in individuals
@@ -257,7 +257,7 @@ Take a look at our video tutorials for step-by-step instructions on how to insta
 
 If CUDA out of memory exceptions occur, it will be necessary to reduce the number of CPU processes used (the `cpu` parameter).
 
-#### For more information, help, and examples, please visit: https://osf.io/t6j7u/wiki/home/
+#### For more information, help, and examples, please start at `docs/index.md`.
 
 ## <a name="citation"></a> Citation
 Islam SMA, Díaz-Gay M, Wu Y, Barnes M, Vangara R, Bergstrom EN, He Y, Vella M, Wang J, Teague JW, Clapham P, Moody S, Senkin S, Li YR, Riva L, Zhang T, Gruber AJ, Steele CD, Otlu B, Khandekar A, Abbasi A, Humphreys L, Syulyukina N, Brady SW, Alexandrov BS, Pillay N, Zhang J, Adams DJ, Martincorena I, Wedge DC, Landi MT, Brennan P, Stratton MR, Rozen SG, and Alexandrov LB (2022) Uncovering novel mutational signatures by _de novo_ extraction with SigProfilerExtractor. __Cell Genomics__. doi: [10.1016/j.xgen.2022.100179](https://doi.org/10.1016/j.xgen.2022.100179).
