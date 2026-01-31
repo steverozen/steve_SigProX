@@ -6,7 +6,30 @@
 SigProfilerExtractor allows de novo extraction of mutational signatures from data generated in a matrix format. 
 The tool identifies the number of operative mutational signatures, their activities in each sample, and the probability 
 for each signature to cause a specific mutation type in a cancer sample. The tool makes use of SigProfilerMatrixGenerator 
-and SigProfilerPlotting. Detailed documentation can be found in-repo under `docs/` (start at `docs/index.md`).
+and SigProfilerPlotting.
+
+## Documentation
+
+This repository's documentation has been migrated into the repo and is rendered with MkDocs.
+
+- Source pages: `docs/` (start at `docs/index.md`)
+- MkDocs config: `mkdocs.yml`
+
+### Preview docs locally
+
+Live server (recommended):
+
+```bash
+python3 -m pip install mkdocs mkdocs-material pymdown-extensions
+python3 -m mkdocs serve
+```
+
+Static build:
+
+```bash
+python3 -m mkdocs build
+open site/index.html
+```
 
 # Table of contents
 - [Installation](#installation)
