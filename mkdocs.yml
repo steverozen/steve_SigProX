@@ -8,10 +8,10 @@ theme:
   name: readthedocs
 
 nav:
-  - Home: index.md
-  - Installation: installation.md
-  - CLI Usage: cli-usage.md
-  - Python API: python-api.md
-  - Output: output.md
-  - Citation: citation.md
-
+  - Home: home.md
+  - '1. Installation': '1. Installation.md'
+  - '2. Quick Start Example': '2. Quick Start Example.md'
+  - '3. Using the Tool - Input': '3. Using the Tool - Input.md'
+  - '4. Using the Tool - Output': '4. Using the Tool - Output.md'
+  - '5. Output - All Solutions': '5. Output - All Solutions.md'
+  - '6. Output - Suggested Solution': '6. Output - Suggested Solution.md'
