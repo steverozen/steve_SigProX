@@ -5,13 +5,54 @@ repo_url: https://github.com/SigProfilerSuite/SigProfilerExtractor
 docs_dir: docs
 
 theme:
-  name: readthedocs
+  name: material
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - toc.follow
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
 
 nav:
   - Home: home.md
-  - '1. Installation': '1. Installation.md'
-  - '2. Quick Start Example': '2. Quick Start Example.md'
-  - '3. Using the Tool - Input': '3. Using the Tool - Input.md'
-  - '4. Using the Tool - Output': '4. Using the Tool - Output.md'
-  - '5. Output - All Solutions': '5. Output - All Solutions.md'
-  - '6. Output - Suggested Solution': '6. Output - Suggested Solution.md'
+  - Getting Started:
+      - '1. Installation': '1. Installation.md'
+      - '2. Quick Start Example': '2. Quick Start Example.md'
+  - Using The Tool:
+      - '3. Using the Tool - Input': '3. Using the Tool - Input.md'
+      - '4. Using the Tool - Output': '4. Using the Tool - Output.md'
+  - Output:
+      - '5. Output - All Solutions': '5. Output - All Solutions.md'
+      - '6. Output - Suggested Solution': '6. Output - Suggested Solution.md'
+
+plugins:
+  - search
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+hooks:
+  - mkdocs_hooks.py
