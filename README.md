@@ -12,9 +12,7 @@ and SigProfilerPlotting.
 
 This repository's documentation has been migrated into the repo and is rendered with MkDocs.
 
-- Source pages: `docs/` (start at `docs/index.md`)
-- MkDocs config: `mkdocs.yml`
-- Hosted docs (GitHub Pages): `https://sigprofilersuite.github.io/SigProfilerExtractor/` (requires repo Pages “Source: GitHub Actions”)
+Full documentation is available in `docs/` (rendered via MkDocs): `https://sigprofilersuite.github.io/SigProfilerExtractor/`
 
 ### Preview docs locally
 
