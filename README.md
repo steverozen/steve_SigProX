@@ -10,9 +10,7 @@ and SigProfilerPlotting.
 
 ## Documentation
 
-This repository's documentation has been migrated into the repo and is rendered with MkDocs.
-
-Full documentation is available in `docs/` (rendered via MkDocs): `https://sigprofilersuite.github.io/SigProfilerExtractor/`
+Full documentation is available in `docs/` (rendered via MkDocs): https://sigprofilersuite.github.io/SigProfilerExtractor/
 
 ### Preview docs locally
 
