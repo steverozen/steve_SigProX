@@ -12,22 +12,6 @@ and SigProfilerPlotting.
 
 Full documentation is available in `docs/` (rendered via MkDocs): https://sigprofilersuite.github.io/SigProfilerExtractor/
 
-### Preview docs locally
-
-Live server (recommended):
-
-```bash
-python3 -m pip install mkdocs mkdocs-material pymdown-extensions
-python3 -m mkdocs serve
-```
-
-Static build:
-
-```bash
-python3 -m mkdocs build
-open site/index.html
-```
-
 # Table of contents
 - [Installation](#installation)
 - [Functions](#functions)
