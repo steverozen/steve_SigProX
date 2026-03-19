@@ -139,4 +139,6 @@ test_vcf_output/
 test_matrix_*_output/
 SigProfilerExtractor/data/VCFInput/logs/
 SigProfilerExtractor/data/VCFInput/input/
-SigProfilerExtractor/data/VCFInput/output/
+SigProfilerExtractor/data/VCFInput/output/# pixi environments
+.pixi/*
+!.pixi/config.toml
